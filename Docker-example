@@ -1,0 +1,11 @@
+FROM ubuntu
+RUN apt update -y
+RUN apt install git maven tree apache2 -y
+COPY index.txt /tmp
+ADD https://dlcdn.apache.org/maven/maven-3/3.9.9/binaries/apache-maven-3.9.9-bin.tar.gz /tmp
+WORKDIR /tmp
+LABEL author dileep
+ENV name dilli
+ENV place krgp
+VOLUME ["/volume1"]
+EXPOSE 8080
