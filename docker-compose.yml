@@ -1,0 +1,21 @@
+version: '3.8'
+services:
+  movies:
+    image: paytmmovies:v1
+    ports:
+      - "81:80"
+
+  trains:
+    image: paytmtrain:v1
+    ports:
+      - "82:80"
+
+  dth:
+    image: paytmdth:v1
+    ports:
+      - "83:80"
+
+  recharge:
+    image: paytmrecharge:v1
+    ports:
+      - "84:80"
